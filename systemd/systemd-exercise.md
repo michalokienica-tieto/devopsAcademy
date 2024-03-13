@@ -19,7 +19,7 @@
 - Have a reload signal configured
 - Restart on failure
 - Delay between service restarts
-- Be "wanted" as another target unit
+- Be "wanted" for another target unit
 
 # Verification:
 - The service should be listed on an enabled services list (systemctl list-unit-files --state=enabled).

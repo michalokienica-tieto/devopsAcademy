@@ -1,29 +1,28 @@
 Task Description:
-Create a custom system / user systemd service named system-stats.service that will serve below functionality:
-- every 10 seconds, file /var/log/system-stats.log will be updated with information:
-	-date
-	-how many users are logged in 
-	-memory usage in %
-	-if number of logged in user is greater than {USERS_NUMBER} then also put an   information
-	"More than {USERS_NUMBER} users logged in" else "Number of logged in users is normal"
-	-if memory usage is greater than {MEM_WARNING_LIMIT} % then also put an information 
-	"More than {MEM_WARNING_LIMIT} 50% memory usage is used now" else "Memory usage is normal"
-	- value of {USERS_NUMBER} and {MEM_WARNING_LIMIT} should be placed in service.config file and sourced to main script file for use.
-- service config should have configured:
-	- custom description
-	- to be started after other service 
-	- require active state of ther service
-	- have env file and config file
-	- have reload signal configured
-	- restart on failure
-	- delay between service restart
-	- to be "wanted" as other target unit
+Create a custom systemd service named system-stats.service that serves the following functionality:
 
+Every 10 seconds, update the file /var/log/system-stats.log with the following information:
+
+Date
+Number of users logged in
+Memory usage in %
+If the number of logged-in users is greater than {USERS_NUMBER}, add the information "More than {USERS_NUMBER} users logged in"; otherwise, add "Number of logged-in users is normal".
+If memory usage is greater than {MEM_WARNING_LIMIT}%, add the information "More than {MEM_WARNING_LIMIT}% memory usage is used now"; otherwise, add "Memory usage is normal".
+The values of {USERS_NUMBER} and {MEM_WARNING_LIMIT} should be placed in a service.config file and sourced to the main script file for use.
+Service config should be configured to include:
+
+Custom description
+Start after other service
+Require active state of another service
+Have an env file and config file
+Have a reload signal configured
+Restart on failure
+Delay between service restarts
+Be "wanted" as another target unit
 Verification:
-- service can be listed on a enabled services list (systemctl list-unit-files --state=enabled)
-- service should in active, running state
-- service should be able to reload config:	
-	- user can change service config by editing values {USERS_NUMBER} and {MEM_WARNING_LIMIT} in service.config ile
-	- systemctl reload system-stats.service should work
-- all needed information can be found in /var/log/system-stats.log every 10 seconds
-	
+The service should be listed on an enabled services list (systemctl list-unit-files --state=enabled).
+The service should be in an active, running state.
+The service should be able to reload config:
+Users can change service config by editing values {USERS_NUMBER} and {MEM_WARNING_LIMIT} in the service.config file.
+systemctl reload system-stats.service should work.
+All needed information can be found in /var/log/system-stats.log every 10 seconds.

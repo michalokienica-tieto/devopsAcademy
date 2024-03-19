@@ -28,3 +28,10 @@
     - Users can change service config by editing values {USERS_NUMBER} and {MEM_WARNING_LIMIT} in the service.config file.
     - systemctl reload system-stats.service should work.
 - All needed information can be found in /var/log/system-stats.log every 10 seconds.
+
+## Create a custom systemd timer named system-stats.timer that serves the following functionality:
+- It will run periodically system-stats.service
+- Periods:
+- Every 10 seconds, every day at midnight
+- timer should be started when the timers.target is reached during system startup
+- timer reuquires to system-stats.servic be active and running before timer started

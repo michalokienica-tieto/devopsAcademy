@@ -21,7 +21,7 @@
 - Delay between service restarts
 - Be "wanted" for another target unit
 
-# Verification:
+### Verification:
 - The service should be listed on an enabled services list (systemctl list-unit-files --state=enabled).
 - The service should be in an active, running state.
 - The service should be able to reload config:

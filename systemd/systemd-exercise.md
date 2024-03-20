@@ -35,4 +35,4 @@
 - Every 10 seconds, every day at midnight
 - script from that service shouldnt run constantly (some changes to the script are needed then)
 - timer should be started when the timers.target is reached during system startup
-- timer reuquires to system-stats.servic be active and running before timer started
+- timer requires to system-stats.service to be active and running before timer started

@@ -5,8 +5,8 @@ This Bash script automates the process of building a Docker image, uploading it 
 
 ## Features
 - Builds a Docker image.
-- Uploads the Docker image to a specified repository.
 - Runs a local container using the uploaded image.
+- Uploads the Docker image to a specified repository (only if local checks are passed)
 - checking the success of image upload and container local execution.
 - Utilizes error handling and parameterization for flexibility.
 - Use functions as much as possible

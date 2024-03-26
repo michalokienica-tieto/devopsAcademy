@@ -10,4 +10,4 @@ This Bash script automates the process of building a Docker image, uploading it 
 - checking the success of image upload and container local execution.
 - Utilizes error handling and parameterization for flexibility.
 - Use functions as much as possible
-- Paramatrize as much as possible (image name, repository credentials etc.)
+- Paramatrize as much as possible (image name, tag, repository credentials etc.)

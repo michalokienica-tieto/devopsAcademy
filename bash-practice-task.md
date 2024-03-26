@@ -12,3 +12,4 @@ This Bash script automates the process of building a Docker image, uploading it 
 - Use functions as much as possible
 - Paramatrize as much as possible (Dockerfile, image name, tag, registry credentials etc.)
 - Handling credentials (as local env, sourcing from other file, other way)
+- every variable should have a default value (if possible)

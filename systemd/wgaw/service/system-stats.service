@@ -1,0 +1,10 @@
+[Unit]
+Description=<Collect custom system statistics every 10 seconds>
+
+[Service]
+ExecStart=/bin/bash /usr/sbin/system-stats.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -5,7 +5,7 @@
 # tieto intern           #
 ##########################
 
-LOG_FILE="/tmp/system-stats.log"
+LOG_FILE="/var/log/system-stats.log"
 ACCETABLE_USERS_NUMBER=1
 MEM_WARNING_LIMIT=75
 

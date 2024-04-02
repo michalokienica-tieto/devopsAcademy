@@ -14,6 +14,9 @@ systemctl status system-stats.service
 # enable service
 sudo systemctl enable system-stats.service
 
+# stop service
+sudo systemctl stop system-stats.service
+
 # disable service
 sudo systemctl disable system-stats.service
 ```

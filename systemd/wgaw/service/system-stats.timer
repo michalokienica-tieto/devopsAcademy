@@ -1,0 +1,11 @@
+[Unit]
+Description=Custom Timer
+
+[Timer]
+# OnBootSec=1min
+OnBootSec=10
+# OnUnitActiveSec=1h
+OnUnitActiveSec=10
+
+[Install]
+WantedBy=timers.target

@@ -1,6 +1,10 @@
-1. sh script: /usr/sbin/system-stats.sh
-2. service: /etc/systemd/system/system-stats.service
-3. logs: /var/log/system-stats.log
+##### Table of Contents  
+1. [System stats service](#system-stats-service)
+
+### System stats service
+- sh script: ```/usr/sbin/system-stats.sh```
+- service: ```/etc/systemd/system/system-stats.service```
+- logs: ```/var/log/system-stats.log```
 
 ```bash
 sudo systemctl daemon-reload
